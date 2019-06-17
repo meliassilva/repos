@@ -1,0 +1,30 @@
+<mat-sidenav-container>
+    <mat-sidenav #sideNav role="navigation">
+        <mat-list>
+            <mat-list-item><a routerLink="" (click)="sideNav.close()"><mat-icon>home</mat-icon></a></mat-list-item>            
+            <mat-list-item>
+                <app-user class="user"></app-user>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="side-nav-content">
+        <div class="menu">
+            <div>
+                <mat-toolbar class="toolbar">
+                    <button mat-icon-button (click)="sideNav.open()">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                </mat-toolbar>
+            </div>
+            <div>
+                <mat-toolbar class="toolbar">
+                    <a mat-button routerLink=""><mat-icon>home</mat-icon></a>                                        
+                    <app-user class="user"></app-user>
+                </mat-toolbar>
+            </div>
+        </div>
+        <div class="main-router-outlet">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

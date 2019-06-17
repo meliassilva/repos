@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  repos.web:
+    image: repos.web
+    build:
+      context: ./repos.Web
+      dockerfile: Dockerfile
+
+  repos.api:
+    image: repos.api
+    build:
+      context: ./repos.Api
+      dockerfile: Dockerfile

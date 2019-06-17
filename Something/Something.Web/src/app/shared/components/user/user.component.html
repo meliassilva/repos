@@ -1,0 +1,4 @@
+<span class="user">
+  <span *ngIf="userService.isLoggedIn()"><i class="material-icons">person</i>&nbsp; {{userService.user().name }}</span>
+  <span *ngIf="!userService.isLoggedIn()">Login</span>
+</span>

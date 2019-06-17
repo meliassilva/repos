@@ -1,0 +1,14 @@
+.full-spinner {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  
+  .inline-spinner {
+    display: inline-block;
+    * {
+      display: inline-block;
+    }
+  }
+  
