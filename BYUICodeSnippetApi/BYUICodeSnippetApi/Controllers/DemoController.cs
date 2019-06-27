@@ -9,10 +9,20 @@ namespace BYUICodeSnippetApi.Controllers
 {
     public class DemoController : ApiController
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public string Get()
         {
             return "Welcome To Web API";
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public List<string> Get(int Id)
         {
             return new List<string> {

@@ -1,0 +1,34 @@
+.user {
+    flex: 1;
+}
+
+.menu {
+    >div:last-child {
+        display: none;
+    }
+}
+
+
+
+.sideNavContent {
+    min-height: 350px;
+}
+
+.sidenav {
+    padding: 20px;
+}
+
+.mat-sidenav-container {
+    background: transparent;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        >div:first-child {
+            display: none;
+        }
+        >div:last-child {
+            display: block;
+        }
+    }
+}

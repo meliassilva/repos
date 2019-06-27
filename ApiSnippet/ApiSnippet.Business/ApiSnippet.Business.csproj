@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <RootNamespace>Byui.ApiSnippet.Business</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="AppSecrets.Cryptor" Version="2.0.4" />
+        <PackageReference Include="AutoMapper" Version="8.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.2" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ApiSnippet.Enterprise\ApiSnippet.Enterprise.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Utilities\Profiles" />
+    </ItemGroup>
+</Project>

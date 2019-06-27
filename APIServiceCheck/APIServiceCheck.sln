@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServiceCheck", "APIServiceCheck\APIServiceCheck.csproj", "{64C5A4DB-7482-4FA7-BE89-98FAA8C10B61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64C5A4DB-7482-4FA7-BE89-98FAA8C10B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C5A4DB-7482-4FA7-BE89-98FAA8C10B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C5A4DB-7482-4FA7-BE89-98FAA8C10B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C5A4DB-7482-4FA7-BE89-98FAA8C10B61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08C72038-04D9-4F2D-A6A1-F887D1BE5E96}
+	EndGlobalSection
+EndGlobal

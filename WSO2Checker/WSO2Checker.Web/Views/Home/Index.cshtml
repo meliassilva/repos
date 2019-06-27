@@ -1,0 +1,12 @@
+@using Microsoft.AspNetCore.Html
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<app-root></app-root>
+
+<script type="text/javascript">
+
+    var config = @Html.Raw(ViewData["Config"]);
+
+</script>

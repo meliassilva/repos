@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Brigham Young University - Idaho">
+    <meta name="author" content="Brigham Young University - Idaho">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewData["Title"]</title>
+
+    @await Component.InvokeAsync("MasterPages", new {type = "Head"})
+
+    <link asp-href-include="~/*.css" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var appTitle = 'WSO2Checker';
+        var appUrl = '@Url.Content("~/")';
+    </script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @RenderSection("HeadContent", required: false)
+    <environment names="Development,Staging">
+        <style type="text/css">
+            header .site-banner { background-color: #d2691e; }
+
+            @@media (max-width: 768px) {
+                header .site-navigation.navbar-inverse { background-color: #d2691e; }
+            }
+        </style>
+    </environment>
+
+    <base href="@ViewData["BaseHref"]">
+</head>
+
+    <body>
+        @await Component.InvokeAsync("MasterPages", new {type = "Header"})
+        <main role="main" class="site-content container">
+            <section id="page-content">
+                @RenderBody()
+            </section>
+        </main> <!-- end site-content -->
+        @await Component.InvokeAsync("MasterPages", new {type = "Footer"})
+        
+    <environment names="Development">
+        <script type="text/javascript" src="/runtime.js"></script>
+        <script type="text/javascript" src="/polyfills.js"></script>
+        <script type="text/javascript" src="/styles.js"></script>
+        <script type="text/javascript" src="/vendor.js"></script>
+        <script type="text/javascript" src="/main.js"></script>
+    </environment>
+    
+    <environment names="Staging,Production">
+        <script type="text/javascript" asp-src-include="~/runtime*.js"></script>
+        <script type="text/javascript" asp-src-include="~/polyfills*.js"></script>
+        <script type="text/javascript" asp-src-include="~/main*.js"></script>
+    </environment>
+        
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
