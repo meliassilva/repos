@@ -8,5 +8,6 @@ namespace Byui.WSO2Checker.Enterprise.Interfaces
     {
         string WSO2Username { get; }
         string WSO2Password { get; }
+
     }
 }

@@ -12,12 +12,14 @@ namespace Byui.WSO2Checker.Console
             // initialize dependancy injection and user secrets
             Startup startup = new Startup(args);
             startup.ConfigureServices();
-            
+
             // instantiate and run your business 
             // using await is possible with C# 7.1
             ICheckerRepository checkerRepository = startup.ServiceProvider.GetService<ICheckerRepository>();
 
-            string token = checkerRepository.GetAccessToken().Result;
+            string token = checkerRepository.Verification().Result;
+
+            System.Console.WriteLine(token);
 
             //var values = exampleBusinss.GetValues();
             //foreach (var value in values)

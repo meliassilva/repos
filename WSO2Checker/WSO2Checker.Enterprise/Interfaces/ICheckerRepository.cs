@@ -6,7 +6,10 @@ namespace Byui.WSO2Checker.Enterprise.Interfaces
 {
     public interface ICheckerRepository
     {
-        Task<string> GetAccessToken();
+        Task<string> Verification();
         //Task<Response<List<Assignments>>> GetAssignmentsByEntityCode(string entityCode, bool isSectionCode = true);
+        
+
     }
 }
+

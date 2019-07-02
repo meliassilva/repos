@@ -28,10 +28,11 @@ namespace Byui.WSO2Checker.Enterprise.Repositories
             string result = await response.Content.ReadAsStringAsync();
 
             Token token = JsonConvert.DeserializeObject<Token>(result);
-                        
+
+
             return token.AccessToken;
         }
-    
+
         private string GetBase64UsernamePassword(string username, string password)
         {
             var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
@@ -39,27 +40,36 @@ namespace Byui.WSO2Checker.Enterprise.Repositories
 
             return convertedString;
         }
-          
-        public async Task getStudentListAsync(Token)
+
+        public async Task<string> GetStudentList()
         {
-            Url url = new Url($"https://apitemp.byui.edu/domain/studentlist/v1/student/Campus.2019.Spring.CS313.1?returnformat=json");
-            var response = await url.WithHeader("Authorization", $"Bearer" Token)
+
+            //pass the url
+            Url url = new Url($"https://apitemp.byui.edu/domain/studentlist/v1/student/Campus.2019.Spring.CS 313.1?returnformat=json");
+            string accessToken = await GetAccessToken();
+
+            //pass what I need for authorization
+            var response = await url.WithHeader("Authorization", $"Bearer {accessToken}")
                 .SendAsync(HttpMethod.Get);
 
+            //my result 
             string result = await response.Content.ReadAsStringAsync();
 
-            Student student = JsonConvert.DeserializeObject<Student>(result);
 
-
+            return result;
         }
 
-        public void verifiedWSO2()
+        public async Task<string> Verification()
         {
+            string verified = await GetStudentList();
+            if (verified != null && verified != "")
+            {
+                return "Sucess";
+            }
 
+            return "Failed";
 
 
         }
-
-
     }
 }
